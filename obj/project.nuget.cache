@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "CY1rB7OuxFXH+sOQGWS2r0i3pTb0/n2uDgTZI2FhO9Mfeuup3dj0knvxmVsU7jN2kAGatnsORd1UfU3IieM2MA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\SikandarRamzan\\source\\repos\\CSV_Modifier_Client\\CSV_Modifier_Client.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\awssdk.core\\3.7.202.12\\awssdk.core.3.7.202.12.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\awssdk.dynamodbv2\\3.7.201.13\\awssdk.dynamodbv2.3.7.201.13.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\awssdk.extensions.netcore.setup\\3.7.7\\awssdk.extensions.netcore.setup.3.7.7.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\awssdk.s3\\3.7.104.2\\awssdk.s3.3.7.104.2.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\awssdk.secretsmanager\\3.7.201.28\\awssdk.secretsmanager.3.7.201.28.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\2.0.0\\microsoft.extensions.configuration.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\2.0.0\\microsoft.extensions.dependencyinjection.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\2.0.0\\microsoft.extensions.logging.abstractions.2.0.0.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\microsoft.extensions.primitives\\2.0.0\\microsoft.extensions.primitives.2.0.0.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\SikandarRamzan\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.4.0\\system.runtime.compilerservices.unsafe.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
