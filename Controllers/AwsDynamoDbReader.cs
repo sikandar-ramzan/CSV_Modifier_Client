@@ -8,29 +8,24 @@ namespace CSV_Modifier_Client.Controllers
 {
     public class AwsDynamoDbReader : Controller
     {
-        private readonly AwsSecretsService _awsSecretsService;
         private readonly IAmazonDynamoDB _dynamoDBClient;
         public AwsDynamoDbReader(AwsSecretsService awsSecretsService, IAmazonDynamoDB dynamoDBClient)
         {
-            _awsSecretsService = awsSecretsService;
             _dynamoDBClient = dynamoDBClient;
-
         }
         public IActionResult Index()
         {
-            // Define the table name
             string tableName = "csv_files_table";
 
-            // Query or scan DynamoDB to fetch data (Example: Scanning the entire table)
             var scanRequest = new ScanRequest
             {
                 TableName = tableName,
                
             };
 
+            //will scan and return all items from dynam db -skndr
             var scanResponse = _dynamoDBClient.ScanAsync(scanRequest).Result;
 
-            // Convert DynamoDB items to a list of objects or a model class
             var items = scanResponse.Items.Select(item =>
                  new DynamoDbItem
                  {
@@ -39,7 +34,6 @@ namespace CSV_Modifier_Client.Controllers
                      TechStack = item["Tech_Stack"].S
                  }).ToList();
 
-            // Pass the data to the Razor view
             return View(items);
         }
     }

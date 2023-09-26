@@ -7,7 +7,6 @@ namespace CSV_Modifier_Client.Services
     public class DynamoDbService
     {
         private readonly IAmazonDynamoDB _dynamoDBClient;
-        private readonly string tableName = "YourDynamoDBTableName"; // Replace with your table name
 
         public DynamoDbService(IAmazonDynamoDB dynamoDBClient)
         {
@@ -20,16 +19,15 @@ namespace CSV_Modifier_Client.Services
 
             try
             {
-                // Assuming you want to retrieve all items from the specified DynamoDB table.
+                // providing no filter condition to fetch all items
                 var scanConditions = new List<ScanCondition>();
 
                 var results = await context.ScanAsync<DynamoDbItem>(scanConditions).GetRemainingAsync();
                 return results;
             }
-            catch (Exception ex)
+            catch
             {
-                // Handle any exceptions here
-                throw ex;
+                throw new Exception();
             }
         }
     }

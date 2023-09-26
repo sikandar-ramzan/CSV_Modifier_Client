@@ -9,8 +9,7 @@ namespace CSV_Modifier_Client.Services
         public async Task<string> GetAwsSecret (string secretName)
         {
             const string region = "us-east-1";
-
-            IAmazonSecretsManager awsSecretsMngrClient = new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(region));
+            var awsSecretsMngrClient = new AmazonSecretsManagerClient(RegionEndpoint.GetBySystemName(region));
 
             var request = new GetSecretValueRequest
             {
@@ -26,12 +25,10 @@ namespace CSV_Modifier_Client.Services
             }
             catch 
             {
-                throw new Exception("Erro while fetching aws secret");
+                throw new Exception("Error while fetching aws secret");
             }
 
-            var secret = response.SecretString;
-
-            return secret;
+            return response.SecretString;
         }
     }
 }

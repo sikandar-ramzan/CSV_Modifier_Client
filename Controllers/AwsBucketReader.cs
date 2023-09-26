@@ -15,6 +15,8 @@ namespace CSV_Modifier_Client.Controllers
     public class AwsBucketReader : Controller
     {
         private readonly string bucketName = "csv-files-s3-bucket";
+
+        //fetching this file (object) from s3 bucket
         private readonly string objectKey = "CommaSeparatedFile.csv";
         private readonly AwsSecretsService _awsSecretsService;
 
@@ -24,6 +26,7 @@ namespace CSV_Modifier_Client.Controllers
         }
         public async Task<IActionResult> Index()
         {
+            //super user manager => superman
             string superman_access_key = await _awsSecretsService.GetAwsSecret("superman_access_key");
             string superman_secret_superman_access_key = await _awsSecretsService.GetAwsSecret("superman_secret_access_key");
             try
@@ -51,8 +54,8 @@ namespace CSV_Modifier_Client.Controllers
                         {
                             var model = new CsvDataModel
                             {
-                                Id = Convert.ToInt32(rowData[0]),
-                                ResourceName = rowData[1],
+                                ID = Convert.ToInt32(rowData[0]),
+                                Name = rowData[1],
                                 TechStack = rowData[2]
                             };
                             csvModels.Add(model);
