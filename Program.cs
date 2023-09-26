@@ -13,6 +13,7 @@ namespace CSV_Modifier_Client
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<AwsSecretsService>();
 
+            //add the aws and dynamo db services
             builder.Services.AddAWSService<IAmazonDynamoDB>();
             builder.Services.AddTransient<DynamoDbService>();
 

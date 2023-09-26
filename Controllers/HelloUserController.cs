@@ -15,7 +15,7 @@ namespace CSV_Modifier_Client.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            string secretName = "UserName";
+            const string secretName = "UserName";
             string awsSecret = await _awsSecretsService.GetAwsSecret(secretName);
 
             return View(new HelloUserModel { Token=awsSecret });

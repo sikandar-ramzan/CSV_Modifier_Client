@@ -10,8 +10,7 @@ namespace CSV_Modifier_Client.Controllers
     public class CsvUpload : Controller
     {
         private readonly string bucketName = "csv-files-s3-bucket";
-/*        private readonly string objectKey = "CommaSeparatedFile.csv";
-*/        private readonly AwsSecretsService _awsSecretsService;
+        private readonly AwsSecretsService _awsSecretsService;
         public CsvUpload(AwsSecretsService awsSecretsService)
         {
             _awsSecretsService = awsSecretsService;
@@ -22,7 +21,6 @@ namespace CSV_Modifier_Client.Controllers
             var model = new UploadViewModel();
             return View(model);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> Upload(IFormFile csvFile)
@@ -47,7 +45,7 @@ namespace CSV_Modifier_Client.Controllers
 
                 var model = new UploadViewModel
                 {
-                    Message = "CSV file uploaded successfully to S3."
+                    Message = "CSV file uploaded successfully to S3"
                 };
 
                 return View("Index", model);
